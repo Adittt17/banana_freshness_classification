@@ -1,5 +1,5 @@
-# **🍌 Banana Ripeness Classification Using CNN**
-This project is a **banana ripeness classification system** developed using a **Convolutional Neural Network (CNN)**. It classifies banana images into two categories:
+# **🍌 Banana Freshness Classification Using CNN**
+This project is a **banana Freshness classification system** developed using a **Convolutional Neural Network (CNN)**. It classifies banana images into two categories:
 
 **Ripe**
 
@@ -9,7 +9,7 @@ This project is a **banana ripeness classification system** developed using a **
 🔗 https://informatics-unsri-klasifikasi-kematangan-pisang.streamlit.app/
 
 ## **🧠 About the Project**
-The ripeness of bananas greatly affects their quality, flavor, and market value. This project aims to assist consumers and sellers by providing an AI-powered tool to automatically classify bananas based on ripeness using image analysis.
+The freshness of bananas greatly affects their quality, flavor, and market value. This project aims to assist consumers and sellers by providing an AI-powered tool to automatically classify bananas based on ripeness using image analysis.
 The model was trained on a dataset containing images of ripe and unripe bananas captured under various lighting and background conditions. It utilizes convolutional layers to learn visual features and make predictions.
 
 ## **🛠️ Technologies Used**
