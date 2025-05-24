@@ -6,7 +6,7 @@ This project is a **banana Freshness classification system** developed using a *
 **Unripe**
 
 🟢 **Try the live demo:**
-🔗 https://informatics-unsri-klasifikasi-kematangan-pisang.streamlit.app/
+🔗 https://bananafreshnessclassification.streamlit.app/
 
 ## **🧠 About the Project**
 The freshness of bananas greatly affects their quality, flavor, and market value. This project aims to assist consumers and sellers by providing an AI-powered tool to automatically classify bananas based on ripeness using image analysis.
