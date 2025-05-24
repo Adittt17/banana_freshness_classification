@@ -12,6 +12,9 @@ This project is a **banana Freshness classification system** developed using a *
 The freshness of bananas greatly affects their quality, flavor, and market value. This project aims to assist consumers and sellers by providing an AI-powered tool to automatically classify bananas based on ripeness using image analysis.
 The model was trained on a dataset containing images of ripe and unripe bananas captured under various lighting and background conditions. It utilizes convolutional layers to learn visual features and make predictions.
 
+✅ **Model Accuracy:**  
+The trained CNN model achieves an impressive **99.76% accuracy** on the train set and **100%** on test set, demonstrating high performance in distinguishing between ripe and unripe bananas.
+
 ## **🛠️ Technologies Used**
 
 **Python**
