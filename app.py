@@ -1,34 +1,32 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-import os
-import tempfile
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
-# Judul
-st.title("🍌 Klasifikasi Pisang Segar vs Busuk")
+# Title
+st.title("🍌 Fresh vs Rotten Banana Classification")
 
-# Load model dari lokal
-model = load_model("banana_asli.h5")  # Ganti dengan path lokal model kamu
+# Load model from local
+model = load_model("banana_asli.h5")  # Replace with your local model path
 
-# Upload gambar
-uploaded_file = st.file_uploader("Upload gambar pisang...", type=["jpg", "jpeg", "png"])
+# Upload image
+uploaded_file = st.file_uploader("Upload a banana image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
-    st.image(img, caption='Gambar Diupload', use_column_width=True)
+    st.image(img, caption='Uploaded Image', use_column_width=True)
 
     # Preprocessing
     img = img.resize((150, 150))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0) / 255.0
 
-    # Prediksi
+    # Prediction
     preds = model.predict(x)
-    label = "🍌 Fresh Banana (Segar)" if preds[0][0] < 0.5 else "🤢 Rotten Banana (Busuk)"
+    label = "🍌 Fresh Banana" if preds[0][0] < 0.5 else "🤢 Rotten Banana"
     confidence = (1 - preds[0][0]) if preds[0][0] < 0.5 else preds[0][0]
 
-    # Tampilkan hasil
-    st.markdown(f"### Prediksi: {label}")
+    # Display results
+    st.markdown(f"### Prediction: {label}")
     st.markdown(f"**Confidence Score:** {confidence:.2%}")
