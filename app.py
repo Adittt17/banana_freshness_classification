@@ -15,7 +15,7 @@ uploaded_file = st.file_uploader("Upload a banana image...", type=["jpg", "jpeg"
 
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
-    st.image(img, caption='Uploaded Image', use_column_width=True)
+    st.image(img, caption='Uploaded Image', use_container_width=True)
 
     # Preprocessing
     img = img.resize((150, 150))
